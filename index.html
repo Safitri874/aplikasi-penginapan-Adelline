@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Penginapan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Aplikasi Penginapan</h1>
+
+        <!-- Formulir Check-in -->
+        <h2>Check-in</h2>
+        <form id="check-in-form">
+            <label for="name">Nama Pemesan:</label>
+            <input type="text" id="name" placeholder="Masukkan Nama" required>
+
+            <label for="phone">Nomor HP:</label>
+            <input type="text" id="phone" placeholder="Masukkan Nomor HP" required>
+
+            <label for="check-in-date">Tanggal Check-in:</label>
+            <input type="date" id="check-in-date" required>
+
+            <button type="submit">Pesan Penginapan</button>
+        </form>
+
+        <!-- Formulir Check-out -->
+        <h2>Check-out</h2>
+        <form id="check-out-form">
+            <label for="check-out-date">Tanggal Check-out:</label>
+            <input type="date" id="check-out-date" required>
+
+            <label for="payment-proof">Bukti Pembayaran:</label>
+            <input type="file" id="payment-proof" accept="image/*" required>
+
+            <button type="submit">Proses Check-out</button>
+        </form>
+
+        <div id="reservation-info" class="reservation-info">
+            <h3>Detail Pemesanan:</h3>
+            <p id="info-name"></p>
+            <p id="info-phone"></p>
+            <p id="info-check-in"></p>
+            <p id="info-check-out"></p>
+            <p id="info-payment-proof"></p>
+        </div>
+
+        <!-- Tombol untuk mencetak slip -->
+        <button id="print-slip" style="display: none;">Cetak Slip Pemesanan</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
